@@ -1,0 +1,24 @@
+{
+  "name": "interview_transcript",
+  "type": "interview_transcript",
+  "description": "访谈记录模板，将访谈录音整理为结构化记录",
+  "system_prompt": "你是一个专业的访谈记录整理助手。请根据提供的访谈录音文字稿，整理出结构清晰、重点突出的访谈记录。",
+  "user_prompt": "请将以下访谈录音文字稿整理为结构化访谈记录：\n\n访谈录音文字稿：\n{{{transcript}}}\n\n请按照以下格式整理访谈记录：\n\n# 访谈记录\n\n## 基本信息\n- **访谈主题**: [请根据内容总结]\n- **访谈时间**: [如有提到请填写，否则留空]\n- **访谈地点**: [如有提到请填写，否则留空]\n- **访谈对象**: [请从文字稿中提取]\n- **访谈者**: [请从文字稿中提取]\n\n## 访谈背景\n[请总结访谈的背景和目的]\n\n## 主要话题\n[请列出讨论的主要话题]\n\n## 关键观点\n[请总结访谈对象的关键观点和见解]\n\n## 重要引述\n[请记录重要的直接引述]\n\n## 发现与洞察\n[请总结从访谈中获得的主要发现和洞察]\n\n## 后续行动\n[请列出需要跟进的行动项]\n\n## 总结\n[请提供访谈的总体总结]\n\n请确保记录内容准确、完整，重点突出，便于后续分析和引用。",
+  "variables": [
+    {
+      "name": "{{{transcript}}}",
+      "description": "访谈录音文字稿",
+      "required": true
+    }
+  ],
+  "model_config": {
+    "temperature": 0.4,
+    "max_tokens": null,
+    "top_p": 0.9
+  },
+  "version": "1.0.0",
+  "author": "VideoMind Team",
+  "tags": ["interview", "transcript", "research"],
+  "created_at": "2024-01-01T00:00:00",
+  "updated_at": "2024-01-01T00:00:00"
+}

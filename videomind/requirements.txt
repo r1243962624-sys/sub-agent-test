@@ -1,0 +1,28 @@
+# 核心依赖
+typer>=0.9.0
+rich>=13.0.0
+pydantic>=2.0.0
+pyyaml>=6.0
+
+# 视频处理
+yt-dlp>=2023.11.16
+pydub>=0.25.1
+
+# ASR转写
+openai-whisper>=20231117
+
+# 大模型API
+openai>=1.3.0
+anthropic>=0.7.0
+
+# 工具库
+python-dotenv>=1.0.0
+loguru>=0.7.0
+tqdm>=4.66.0
+tenacity>=8.2.0
+
+# 开发依赖
+pytest>=7.4.0
+black>=23.0.0
+isort>=5.12.0
+mypy>=1.6.0

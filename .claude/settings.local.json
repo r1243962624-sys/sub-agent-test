@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m pip install:*)",
+      "Bash(python:*)",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(for file in \"C:\\\\Users\\\\WaveI\\\\Desktop\\\\test subagent\\\\videomind\\\\templates\"/*.json)"
+    ]
+  }
+}

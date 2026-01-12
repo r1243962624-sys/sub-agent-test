@@ -1,0 +1,89 @@
+# VideoMind 配置文件示例
+# 复制此文件为 config.yaml 并根据需要修改
+
+# API 配置
+api:
+  # API 密钥（建议通过环境变量设置）
+  openai_api_key: ""  # 通过 OPENAI_API_KEY 环境变量设置
+  anthropic_api_key: ""  # 通过 ANTHROPIC_API_KEY 环境变量设置
+  deepseek_api_key: ""  # 通过 DEEPSEEK_API_KEY 环境变量设置
+
+  # 模型提供商: openai, anthropic, deepseek, google
+  model_provider: "openai"
+
+  # 默认模型
+  default_model: "gpt-4-turbo-preview"
+
+  # 模型参数
+  max_tokens: 2000
+  temperature: 0.7
+  top_p: 1.0
+
+# 下载配置
+download:
+  output_dir: "./output"
+  temp_dir: "./temp"
+  download_timeout: 300  # 秒
+  max_download_speed: 0  # KB/s，0为不限速
+  ytdlp_options:
+    format: "best[height<=720]"
+    quiet: true
+    no_warnings: true
+
+# 处理配置
+processing:
+  whisper_model: "base"  # tiny, base, small, medium, large
+  whisper_language: "auto"  # 自动检测
+  keep_intermediate_files: false
+  max_retries: 3
+  retry_delay: 5  # 秒
+  default_template: "study_notes"
+
+# 日志配置
+log:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "./logs/videomind.log"
+  format: "<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <level>{level: <8}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>"
+
+# AI功能配置
+ai:
+  # 成本控制
+  enable_cost_monitoring: true
+  daily_budget: null  # 美元，null为不限制
+  monthly_budget: null
+  total_budget: null
+
+  # Prompt优化
+  enable_prompt_optimization: true
+  default_optimization_level: "balanced"  # minimal, balanced, aggressive
+  auto_optimize_templates: true
+
+  # 批量处理
+  max_concurrent_batch_tasks: 3
+  max_workers_per_batch: 2
+  batch_retry_attempts: 3
+
+  # 模型性能监控
+  enable_model_monitoring: true
+  performance_data_retention_days: 90
+  auto_model_recommendation: true
+
+  # 高级AI功能
+  enable_context_management: true
+  max_context_length: 4000
+  enable_output_validation: true
+  enable_streaming_output: true
+
+  # 错误处理和恢复
+  max_api_retries: 3
+  retry_backoff_factor: 1.5
+  fallback_model_enabled: true
+
+  # 缓存和性能
+  enable_response_caching: true
+  cache_ttl_hours: 24
+  enable_performance_logging: true
+
+# 高级配置
+# http_proxy: "http://proxy.example.com:8080"
+# https_proxy: "http://proxy.example.com:8080"

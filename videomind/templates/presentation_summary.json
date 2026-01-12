@@ -1,0 +1,24 @@
+{
+  "name": "presentation_summary",
+  "type": "presentation_summary",
+  "description": "演示文稿总结模板，将演示视频整理为结构化总结",
+  "system_prompt": "你是一个专业的演示文稿总结助手。请根据提供的演示视频文字稿，整理出结构清晰、重点突出的演示总结。",
+  "user_prompt": "请将以下演示视频内容整理为结构化演示总结：\n\n演示内容文字稿：\n{{{transcript}}}\n\n请按照以下格式整理演示总结：\n\n# 演示总结\n\n## 演示信息\n- **演示主题**: [请根据内容总结]\n- **演示者**: [如有提到请填写]\n- **演示时长**: [如有提到请填写]\n- **演示日期**: [如有提到请填写]\n\n## 核心观点\n[请总结演示的核心观点和主要论点]\n\n## 关键数据\n[请记录演示中提到的关键数据、统计和事实]\n\n## 视觉元素\n[请描述演示中的图表、图片、动画等视觉元素及其含义]\n\n## 故事线\n[请总结演示的故事线或逻辑结构]\n\n## 观众互动\n[如有观众互动环节，请记录互动内容和反馈]\n\n## 行动号召\n[请总结演示中的行动号召或下一步建议]\n\n## 学习要点\n[请总结从演示中学到的主要内容和启发]\n\n请确保总结内容准确、完整，重点突出，便于分享和传播。",
+  "variables": [
+    {
+      "name": "{{{transcript}}}",
+      "description": "演示内容文字稿",
+      "required": true
+    }
+  ],
+  "model_config": {
+    "temperature": 0.4,
+    "max_tokens": null,
+    "top_p": 0.9
+  },
+  "version": "1.0.0",
+  "author": "VideoMind Team",
+  "tags": ["presentation", "summary", "business"],
+  "created_at": "2024-01-01T00:00:00",
+  "updated_at": "2024-01-01T00:00:00"
+}
